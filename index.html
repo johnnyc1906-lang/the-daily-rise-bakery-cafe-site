@@ -219,4 +219,1708 @@
   }
 
   .hero-title {
-    font-family: 'Playfair Di
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.88);
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stars {
+    display: flex;
+    gap: 3px;
+  }
+
+  .star {
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  .hero-rating-text {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--brown-dark);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(200,151,58,0.4);
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(200,151,58,0.5);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ========== SECTION COMMON ========== */
+  section { width: 100%; }
+
+  .section-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--brown-dark);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--brown-light);
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .section-divider.center { margin: 1rem auto 1.5rem; }
+
+  /* ========== ABOUT ========== */
+  #about {
+    background: var(--cream);
+    padding: clamp(4rem, 8vw, 7rem) 5%;
+  }
+
+  .about-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-images {
+    position: relative;
+    height: 520px;
+  }
+
+  .about-img-main {
+    position: absolute;
+    top: 0; left: 0;
+    width: 72%;
+    height: 78%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .about-img-secondary {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 55%;
+    height: 55%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--cream);
+  }
+
+  .about-img-main img,
+  .about-img-secondary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-badge-float {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    background: var(--gold);
+    color: var(--brown-dark);
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    z-index: 3;
+  }
+
+  .about-badge-float .badge-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+  }
+
+  .about-badge-float .badge-text {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .about-text { padding: 1rem 0; }
+
+  .about-text p {
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .about-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: var(--warm-white);
+    border-radius: 10px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .feature-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--brown-dark);
+  }
+
+  .feature-text strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+    margin-bottom: 0.15rem;
+  }
+
+  .feature-text span {
+    font-size: 0.78rem;
+    color: var(--text-light);
+  }
+
+  /* ========== GALLERY / MENU PREVIEW ========== */
+  #menu {
+    background: var(--warm-white);
+    padding: clamp(4rem, 8vw, 7rem) 5%;
+  }
+
+  .menu-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .menu-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .menu-card-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .menu-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .menu-card:hover .menu-card-img img { transform: scale(1.05); }
+
+  .menu-card-tag {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--gold);
+    color: var(--brown-dark);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+  }
+
+  .menu-card-body {
+    padding: 1.2rem 1.4rem 1.4rem;
+  }
+
+  .menu-card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--brown-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .menu-card-body p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ========== SERVICES ========== */
+  #services {
+    background: var(--brown-dark);
+    padding: clamp(4rem, 8vw, 7rem) 5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #services::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(200,151,58,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .services-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .services-header .section-title { color: #fff; }
+  .services-header p { color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7; }
+
+  .services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,151,58,0.2);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .service-card:hover {
+    background: rgba(200,151,58,0.12);
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+  }
+
+  .service-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--brown-dark);
+  }
+
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 0.6rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  /* ========== TESTIMONIALS ========== */
+  #testimonials {
+    background: var(--cream);
+    padding: clamp(4rem, 8vw, 7rem) 5%;
+  }
+
+  .testimonials-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .testimonials-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  .testimonial-card:hover { transform: translateY(-4px); }
+
+  .testimonial-card::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--gold-light);
+    position: absolute;
+    top: -0.5rem;
+    left: 1.2rem;
+    line-height: 1;
+    opacity: 0.5;
+  }
+
+  .testimonial-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-stars .star {
+    width: 14px;
+    height: 14px;
+    background: var(--gold);
+  }
+
+  .testimonial-card p {
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--brown-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .author-info strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--brown-dark);
+    font-weight: 700;
+  }
+
+  .author-info span {
+    font-size: 0.75rem;
+    color: var(--text-light);
+  }
+
+  .review-summary {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    background: var(--brown-dark);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .review-score {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .score-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .score-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .score-details .stars { gap: 4px; }
+  .score-details .stars .star { width: 20px; height: 20px; }
+
+  .score-details span {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+  }
+
+  .review-cta p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ========== HOURS ========== */
+  #hours {
+    background: var(--warm-white);
+    padding: clamp(4rem, 8vw, 7rem) 5%;
+  }
+
+  .hours-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .hours-text .section-divider { margin: 1rem 0 1.5rem; }
+
+  .hours-text p {
+    color: var(--text-mid);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .hours-table {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .hours-table h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--brown-dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(200,151,58,0.15);
+  }
+
+  .hours-row:last-child { border-bottom: none; }
+
+  .hours-day {
+    font-weight: 700;
+    color: var(--brown-dark);
+    font-size: 0.9rem;
+  }
+
+  .hours-time {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+  }
+
+  .hours-time.open { color: var(--sage); font-weight: 700; }
+  .hours-time.closed { color: #cc4444; font-weight: 700; }
+
+  .hours-note {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hours-note svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--brown-dark);
+    flex-shrink: 0;
+  }
+
+  .hours-note p {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+    margin: 0;
+  }
+
+  .location-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .map-placeholder {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, #e8e0d5, #d4c5b0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .location-info {
+    padding: 1.5rem 2rem 2rem;
+  }
+
+  .location-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--brown-dark);
+    margin-bottom: 1rem;
+  }
+
+  .location-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .location-detail svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .location-detail p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .location-detail a {
+    color: var(--brown-light);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .location-detail a:hover { color: var(--gold); }
+
+  .directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--brown-dark);
+    color: #fff;
+    padding: 0.85rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 1.2rem;
+    min-height: 44px;
+  }
+
+  .directions-btn:hover {
+    background: var(--gold);
+    color: var(--brown-dark);
+    transform: translateY(-2px);
+  }
+
+  .directions-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+  /* ========== CONTACT ========== */
+  #contact {
+    background: var(--cream);
+    padding: clamp(4rem, 8vw, 7rem) 5%;
+  }
+
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 15px rgba(59,35,20,0.08);
+    transition: transform 0.3s;
+  }
+
+  .contact-card:hover { transform: translateX(4px); }
+
+  .contact-card-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-card-icon svg { width: 20px; height: 20px; fill: var(--brown-dark); }
+
+  .contact-card-info strong {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-card-info a,
+  .contact-card-info p {
+    font-size: 0.95rem;
+    color: var(--brown-dark);
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0;
+  }
+
+  .contact-card-info a:hover { color: var(--gold); }
+
+  .contact-form {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+  }
+
+  .contact-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--brown-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.85rem 1rem;
+    border: 2px solid rgba(200,151,58,0.25);
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background: var(--cream);
+    transition: border-color 0.3s;
+    outline: none;
+    min-height: 44px;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+    background: #fff;
+  }
+
+  .form-group textarea { min-height: 120px; resize: vertical; }
+
+  .form-submit {
+    background: linear-gradient(135deg, var(--brown-dark), var(--brown-mid));
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .form-submit:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--brown-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200,151,58,0.4);
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--brown-dark);
+    padding: clamp(3rem, 6vw, 5rem) 5% 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand .logo-main {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-brand .logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255,255,255,0.07);
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(200,151,58,0.2);
+    width: fit-content;
+  }
+
+  .footer-rating .stars .star { width: 14px; height: 14px; }
+  .footer-rating span { color: rgba(255,255,255,0.8); font-size: 0.8rem; font-weight: 700; }
+
+  .footer-col h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-col .footer-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-col .footer-detail svg {
+    width: 15px;
+    height: 15px;
+    fill: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .footer-col .footer-detail p,
+  .footer-col .footer-detail a {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-decoration: none;
+    margin: 0;
+  }
+
+  .footer-col .footer-detail a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(200,151,58,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom p {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s;
+  }
+
+  .footer-bottom a:hover { color: var(--gold); }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 1100px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+
+  @media (max-width: 900px) {
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-images { height: 380px; }
+    .menu-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .hours-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .hero-buttons a { width: 100%; max-width: 280px; justify-content: center; }
+
+    .about-features { grid-template-columns: 1fr; }
+    .about-images { height: 300px; }
+    .about-badge-float { display: none; }
+
+    .menu-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .review-summary { flex-direction: column; text-align: center; }
+    .review-score { justify-content: center; }
+
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form { padding: 1.5rem; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .about-images { height: 250px; }
+    .about-img-secondary { width: 50%; height: 50%; }
+  }
+
+  @media (max-width: 320px) {
+    body { font-size: 14px; }
+    .hero-title { font-size: 2rem; }
+    nav { height: 60px; }
+    .mobile-menu { top: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#hero" class="nav-logo" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'}); return false;">
+    <span class="logo-main">The Daily Rise</span>
+    <span class="logo-sub">Bakery & Cafe</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'}); return false;">About</a></li>
+    <li><a href="#menu" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'}); return false;">Gallery</a></li>
+    <li><a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Services</a></li>
+    <li><a href="#testimonials" onclick="document.getElementById('testimonials').scrollIntoView({behavior:'smooth'}); return false;">Reviews</a></li>
+    <li><a href="#hours" onclick="document.getElementById('hours').scrollIntoView({behavior:'smooth'}); return false;">Hours</a></li>
+    <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); return false;" class="nav-cta">Contact</a></li>
+  </ul>
+
+  <button class="hamburger" type="button" aria-label="Toggle menu" onclick="(function(e){ e.preventDefault(); e.stopPropagation(); document.getElementById('mobile-menu').classList.toggle('open'); })(event)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'}); document.getElementById('mobile-menu').classList.remove('open'); return false;">About</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'}); document.getElementById('mobile-menu').classList.remove('open'); return false;">Gallery</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); document.getElementById('mobile-menu').classList.remove('open'); return false;">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('testimonials').scrollIntoView({behavior:'smooth'}); document.getElementById('mobile-menu').classList.remove('open'); return false;">Reviews</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('hours').scrollIntoView({behavior:'smooth'}); document.getElementById('mobile-menu').classList.remove('open'); return false;">Hours</a></li>
+    <li><a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); document.getElementById('mobile-menu').classList.remove('open'); return false;">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://base44.app/api/apps/6a1798b3a88e036d195b8c12/files/mp/public/6a1798b3a88e036d195b8c12/2f554c66d_The-Daily-Rise-Bakery--Cafe-photo-1.jpg" alt="The Daily Rise Bakery & Cafe">
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="hero-badge">Sandy Hook, CT — Est. Local Favorite</span>
+    <h1 class="hero-title">
+      Fresh Baked
+      <em>Every Morning</em>
+    </h1>
+    <p class="hero-subtitle">Artisan breads, handcrafted pastries, and specialty coffee in the heart of Sandy Hook. Where every bite tells a story.</p>
+
+    <div class="hero-rating">
+      <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <span class="hero-rating-text">4.9/5 &nbsp;·&nbsp; 34 Reviews</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="javascript:void(0)" class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'}); return false;">Explore Our Menu</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=The%20Daily%20Rise%20Bakery%20%26%20Cafe%20105%20Church%20Hill%20Rd%2C%20Sandy%20Hook%2C%20CT%2006482%2C%20USA" target="_blank" class="btn-outline">Get Directions</a>
+    </div>
+  </div>
+
+  <a href="javascript:void(0)" class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'}); return false;">
+    <span>Discover</span>
+    <div class="scroll-line"></div>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-images">
+      <div class="about-img-main">
+        <img src="https://base44.app/api/apps/6a1798b3a88e036d195b8c12/files/mp/public/6a1798b3a88e036d195b8c12/2114dbbae_The-Daily-Rise-Bakery--Cafe-photo-2.jpg" alt="Bakery interior">
+      </div>
+      <div class="about-img-secondary">
+        <img src="https://base44.app/api/apps/6a1798b3a88e036d195b8c12/files/mp/public/6a1798b3a88e036d195b8c12/0330ff48e_The-Daily-Rise-Bakery--Cafe-photo-3.jpg" alt="Fresh baked goods">
+      </div>
+      <div class="about-badge-float">
+        <span class="badge-num">4.9</span>
+        <span class="badge-text">Star Rating</span>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-title">A Labor of Love <em>Since Day One</em></h2>
+      <div class="section-divider"></div>
+
+      <p>Welcome to The Daily Rise Bakery & Cafe, Sandy Hook's beloved neighborhood spot where the aroma of freshly baked bread and expertly brewed coffee greets you every morning. We rise early so you can start your day right.</p>
+
+      <p>From our signature sourdough loaves to delicate croissants, every item is crafted with care using locally sourced ingredients. Our cafe offers a warm, welcoming atmosphere perfect for catching up with friends, working remotely, or simply savoring a quiet morning moment.</p>
+
+      <p>With a near-perfect 4.9-star rating from our beloved community, we take immense pride in the quality and consistency that keeps our regulars coming back every single day.</p>
+
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Baked Fresh Daily</strong>
+            <span>Every item made from scratch each morning</span>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.71c.51-1.2 1.06-2.38 1.78-3.4C9.92 20.07 13.84 21 18 21c0-4.98-1.5-9.13-5-12zM7.33 6.67C8.83 4.5 10.71 3 13 3c0 2.38-.83 5.42-2.67 7.33-1.6 1.6-3.95 2.67-6.73 2.67C3.91 9.97 5.2 8.5 7.33 6.67z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Local Ingredients</strong>
+            <span>Sourced from Connecticut farms</span>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Specialty Coffee</strong>
+            <span>Expert baristas, premium roasts</span>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Sandy Hook, CT</strong>
+            <span>105 Church Hill Rd, our home</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY / MENU PREVIEW -->
+<section id="menu">
+  <div class="menu-header">
+    <span class="section-label">From Our Kitchen</span>
+    <h2 class="section-title">A Peek at <em>Our Offerings</em></h2>
+    <div class="section-divider center"></div>
+    <p style="color:var(--text-mid);font-size:1rem;line-height:1.7;">Handcrafted with love every single morning. From sunrise pastries to afternoon bites, there's always something delicious waiting for you.</p>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://base44.app/api/apps/6a1798b3a88e036d195b8c12/files/mp/public/6a1798b3a88e036d195b8c12/682708b2a_The-Daily-Rise-Bakery--Cafe-photo-4.jpg" alt="Baked goods">
+        <span class="menu-card-tag">Pastries</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Artisan Pastries</h3>
+        <p>Buttery croissants, seasonal danishes, and flaky morning treats baked fresh before dawn.</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://base44.app/api/apps/6a1798b3a88e036d195b8c12/files/mp/public/6a1798b3a88e036d195b8c12/de5881e58_The-Daily-Rise-Bakery--Cafe-photo-5.jpg" alt="Cafe drinks">
+        <span class="menu-card-tag">Cafe</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Specialty Coffee & Drinks</h3>
+        <p>House-roasted espresso drinks, lattes, cold brews, and seasonal specials crafted to perfection.</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-img">
+        <img src="https://base44.app/api/apps/6a1798b3a88e036d195b8c12/files/mp/public/6a1798b3a88e036d195b8c12/95f594dc4_The-Daily-Rise-Bakery--Cafe-photo-6.jpg" alt="Breads and more">
+        <span class="menu-card-tag">Bakery</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Artisan Breads & More</h3>
+        <p>Sourdough loaves, hearty rye, multigrain rounds, and sandwich breads baked throughout the day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <span class="section-label" style="color:var(--gold-light);">What We Offer</span>
+    <h2 class="section-title">Everything You <em style="color:var(--gold-light);">Need & Love</em></h2>
+    <div class="section-divider center"></div>
+    <p>From your morning ritual to special celebrations, The Daily Rise is here for every occasion.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-3.55-3.37-5.01-6.52-5.01-3.15 0-6.51 1.46-6.51 5.01v1h13.03v-1z"/></svg>
+      </div>
+      <h3>Fresh Bakery</h3>
+      <p>Handcrafted breads, pastries, and baked goods made every morning from premium ingredients.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+      </div>
+      <h3>Specialty Coffee</h3>
+      <p>Expertly brewed espresso, lattes, cappuccinos, cold brew, and seasonal drink specials.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+      </div>
+      <h3>Cafe Dining</h3>
+      <p>A cozy, welcoming space to enjoy breakfast, lunch bites, and snacks in a warm neighborhood atmosphere.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.86.18-1.3C18 2.12 15.88 0 13.3 0c-1.48 0-2.67.73-3.43 1.8L12 4l2.13-2.13C14.47 1.34 14.88 1 15.5 1c.99 0 1.8.81 1.8 1.8 0 1.16-.99 2.1-2.14 2.1H12.5L8.5 9H6L3 7v14h18V9l-3-3z"/></svg>
+      </div>
+      <h3>Custom Orders</h3>
+      <p>Special occasion cakes, custom bread orders, and catering for events, parties, and gatherings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-header">
+    <span class="section-label">Community Love</span>
+    <h2 class="section-title">What Our Guests <em>Are Saying</em></h2>
+    <div class="section-divider center"></div>
+    <p style="color:var(--text-mid);font-size:1rem;line-height:1.7;">Don't just take our word for it — hear from our wonderful Sandy Hook community members.</p>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <p>"Absolutely the best bakery in Connecticut. The croissants are perfectly flaky and buttery, and the coffee is always spot on. A true gem in Sandy Hook that I visit every single morning."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">S</div>
+        <div class="author-info">
+          <strong>Sarah M.</strong>
+          <span>Regular Customer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <p>"The sourdough bread is unreal — crusty on the outside, perfectly chewy inside. The staff are always warm and welcoming. This place has a real community spirit that you just can't find anywhere else."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">J</div>
+        <div class="author-info">
+          <strong>James R.</strong>
+          <span>Local Resident</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <p>"I ordered a custom birthday cake and it was absolutely stunning — both beautiful and delicious. The Daily Rise never disappoints. Our family's go-to spot for all things baked and brewed!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">L</div>
+        <div class="author-info">
+          <strong>Lisa K.</strong>
+          <span>Happy Customer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-summary">
+    <div class="review-score">
+      <span class="score-num">4.9</span>
+      <div class="score-details">
+        <div class="stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+        <span>Based on 34 Google Reviews</span>
+      </div>
+    </div>
+    <div class="review-cta">
+      <p style="color:rgba(255,255,255,0.8);font-size:1rem;margin-bottom:1rem;">Love what we do? Share your experience!</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=The%20Daily%20Rise%20Bakery%20%26%20Cafe%20105%20Church%20Hill%20Rd%2C%20Sandy%20Hook%2C%20CT%2006482%2C%20USA" target="_blank" class="btn-primary">Leave a Review</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section id="hours">
+  <div class="hours-inner">
+    <div>
+      <span class="section-label">Visit Us</span>
+      <h2 class="section-title">Hours & <em>Location</em></h2>
+      <div class="section-divider"></div>
+      <p class="hours-text" style="color:var(--text-mid);font-size:1rem;line-height:1.8;margin-bottom:1.5rem;">We're up before the sun so your morning starts perfectly. Stop in for your daily ritual or grab a loaf on your way home.</p>
+
+      <div class="hours-table">
+        <h3>Opening Hours</h3>
+        <div class="hours-row">
+          <span class="hours-day">Monday</span>
+          <span class="hours-time open">7:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Tuesday</span>
+          <span class="hours-time open">7:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Wednesday</span>
+          <span class="hours-time open">7:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Thursday</span>
+          <span class="hours-time open">7:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Friday</span>
+          <span class="hours-time open">7:00 AM – 6:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Saturday</span>
+          <span class="hours-time open">7:00 AM – 4:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-time open">8:00 AM – 3:00 PM</span>
+        </div>
+
+        <div class="hours-note">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <p>Hours may vary on holidays. Call ahead for special event hours.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="location-card">
+        <div class="map-placeholder">
+          
+        </div>
+        <div class="location-info">
+          <h3>Find Us in Sandy Hook</h3>
+
+          <div class="location-detail">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <p>105 Church Hill Rd, Sandy Hook, CT 06482, USA</p>
+          </div>
+
+          <div class="location-detail">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <p><a href="tel:+1">Call Us</a></p>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=The%20Daily%20Rise%20Bakery%20%26%20Cafe%20105%20Church%20Hill%20Rd%2C%20Sandy%20Hook%2C%20CT%2006482%2C%20USA" target="_blank" class="directions-btn">
+            <svg viewBox="0 0 24 24"><path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.02 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">We'd Love to <em>Hear From You</em></h2>
+      <div class="section-divider"></div>
+      <p style="color:var(--text-mid);font-size:1rem;line-height:1.8;margin-bottom:2rem;">Have a question about our menu, want to place a special order, or plan an event? We're always happy to help. Reach out and let's chat!</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <strong>Address</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=The%20Daily%20Rise%20Bakery%20%26%20Cafe%20105%20Church%20Hill%20Rd%2C%20Sandy%20Hook%2C%20CT%2006482%2C%20USA" target="_blank">105 Church Hill Rd, Sandy Hook, CT</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <strong>Phone</strong>
+            <a href="tel:+1">Call Now</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <strong>Rating</strong>
+            <p>4.9/5 Stars · 34 Reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="Your first name">
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="Your last name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="" disabled selected>Select a subject...</option>
+          <option value="general">General Inquiry</option>
+          <option value="order">Custom Order</option>
+          <option value="catering">Catering Request</option>
+          <option value="event">Event Planning</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us how we can help..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-main">The Daily Rise</span>
+        <span class="logo-sub">Bakery & Cafe</span>
+        <p>Sandy Hook's beloved neighborhood bakery and cafe, where every morning begins with warmth, craft, and community.</p>
+        <div class="footer-rating">
+          <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+          <span>4.9/5 · 34 Reviews</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'}); return false;">About Us</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'}); return false;">Our Menu</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Services</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('testimonials').scrollIntoView({behavior:'smooth'}); return false;">Reviews</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('hours').scrollIntoView({behavior:'smooth'}); return false;">Hours</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); return false;">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>What We Offer</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Fresh Bakery</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Specialty Coffee</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Cafe Dining</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Custom Orders</a></li>
+          <li><a href="javascript:void(0)" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); return false;">Catering</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-detail">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <p>105 Church Hill Rd,<br>Sandy Hook, CT 06482</p>
+        </div>
+        <div class="footer-detail">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+1">Call Us</a>
+        </div>
+        <div class="footer-detail">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+          <p>4.9/5 Stars Rating</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=The%20Daily%20Rise%20Bakery%20%26%20Cafe%20105%20Church%20Hill%20Rd%2C%20Sandy%20Hook%2C%20CT%2006482%2C%20USA" target="_blank" class="directions-btn" style="margin-top:0.5rem;padding:0.6rem 1.2rem;font-size:0.78rem;">
+          <svg viewBox="0 0 24 24"><path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.02 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+          Directions
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 The Daily Rise Bakery & Cafe. All rights reserved.</p>
+      <p>105 Church Hill Rd, Sandy Hook, CT 06482 &nbsp;·&nbsp; <a href="https://www.google.com/maps/search/?api=1&query=The%20Daily%20Rise%20Bakery%20%26%20Cafe%20105%20Church%20Hill%20Rd%2C%20Sandy%20Hook%2C%20CT%2006482%2C%20USA" target="_blank">View on Google Maps</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  document.addEventListener('click', function(e) {
+    var el = e.target.closest('a');
+    if (!el) return;
+    var href = el.getAttribute('href');
+    if (!href) return;
+    if (href.startsWith('#') && href.length > 1) {
+      e.preventDefault();
+      e.stopPropagation();
+      var target = document.getElementById(href.slice(1));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      // Close any open mobile menu
+      document.querySelectorAll('.mobile-menu, .nav-menu, .nav-links[class*="open"], [class*="mobile-open"]').forEach(function(m) {
+        m.classList.remove('open', 'active', 'show', 'mobile-open');
+      });
+      return;
+    }
+    if (href === '#' || href === '' || href === '/') {
+      e.preventDefault();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>
